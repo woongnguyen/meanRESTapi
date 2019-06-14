@@ -21,7 +21,7 @@ app.use(cors({
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/restapi');
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost:27017/restapi');
 
 // passport 
 var passport = require('passport');
